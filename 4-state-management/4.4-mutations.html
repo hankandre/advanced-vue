@@ -13,6 +13,16 @@
     mutations
   }) {
     // Implement this!
+    return new Vue({
+      data: {
+        state
+      },
+      methods: {
+        commit(mutation) {
+          mutations[mutation](state)
+        }
+      }
+    })
   }
 
   const store = createStore({
